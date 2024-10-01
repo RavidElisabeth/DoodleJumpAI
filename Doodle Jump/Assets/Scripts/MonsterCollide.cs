@@ -10,6 +10,7 @@ public class MonsterCollide : Monster
         if (collision.gameObject.CompareTag("Player")) // Use tag comparison
         {
             Player player = collision.transform.GetComponent<Player>();
+            Debug.Log("kuk");
 
             // If the player is using an item, destroy the monster
             if (player.isUsingItem)
@@ -33,6 +34,7 @@ public class MonsterCollide : Monster
                 // Only mark the player as dead if they are alive
                 if (player.isAlive)
                 {
+                    //player.isAlive = false;
                     // Disable all the player's colliders instead of deactivating the player
                     Collider2D[] colliders = player.GetComponents<Collider2D>(); // Get all colliders attached to the player
                     foreach (Collider2D collider in colliders)
@@ -44,7 +46,7 @@ public class MonsterCollide : Monster
                     GameManager gameManager = FindObjectOfType<GameManager>(); // Find the GameManager
                     if (gameManager != null)
                     {
-                        gameManager.RestartGame(); // Call the RestartGame method
+                    //    gameManager.RestartGame(); // Call the RestartGame method
                     }
                 }
             }

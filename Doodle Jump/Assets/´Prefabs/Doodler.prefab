@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6980472972831491741}
   - component: {fileID: 6980472972831491736}
   - component: {fileID: 6980472972831491737}
+  - component: {fileID: 1546059471918559627}
+  - component: {fileID: 6572556454735872841}
   m_Layer: 0
   m_Name: Doodler
   m_TagString: Untagged
@@ -141,7 +143,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6980472972831491740}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fdb4d268854d4ad40979cf605bcc5e87, type: 3}
   m_Name: 
@@ -150,3 +152,38 @@ MonoBehaviour:
   isUsingItem: 0
   isAlive: 1
   diedToMonster: 0
+--- !u!114 &1546059471918559627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6980472972831491740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9574ffcf6b7c143a53e5e03eab66ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creatureSpeed: 50
+  pathMultiplier: 3
+  hasFinished: 0
+--- !u!114 &6572556454735872841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6980472972831491740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5165e9d2c57a363458ad2df335e5bb11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewDistance: 5
+  viewMask:
+    serializedVersion: 2
+    m_Bits: 128
+  monsterMask:
+    serializedVersion: 2
+    m_Bits: 256
+  drawDebugLines: 1
